@@ -57,10 +57,13 @@
 
 %Für die Tabelle in Aufgabe 23
 \usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
 \usepackage{colortbl}
+\usepackage{amssymb}
+\usepackage{pifont}  % Falls dickerer Haken gewünscht: \ding{51}
 \usepackage{rotating}
-\usepackage{pifont}
-\newcommand{\rotatehead}[1]{\rotatebox{45}{\parbox{2.2cm}{\raggedright\bfseries #1}}}
+\newcommand{\rotatehead}[1]{\rotatebox{45}{\parbox{1.2cm}{\raggedright\bfseries #1}}}
 
 
 
@@ -211,8 +214,125 @@ Ich finde so alte Logos wie das der Friedrich-Schiller-Universität Jena (\autor
 
 
 
+%Hieran bin ich ein bisschen verzweifelt und habe schließlich für ein paar Dinge ein LLM zu Rate gezogen.
+\begin{sidewaystable}
+    \caption{So könnte eine Tabelle zur Auflistung der \\
+    DFG-finanzierten Forschungsprojekte an der FMI aussehen.}
 
-%TODO: Hier die Tabelle auf Seite 8 aus Aufgaben.pdf einfügen
+\rowcolors{1}{white}{white}
+
+\begin{tabular}{l >{\raggedright\arraybackslash}b{6.5cm} b{3.2cm} || c c c c || c b{2.5cm}}
+\hline
+%1. Kopfzeile
+ & & & \multicolumn{4}{c||}{\textbf{Fachbereich}} & & \\[0.7cm]
+
+%2. Kopfzeile
+\rowcolor{gray!30}
+\begin{tabular}[t]{@{}l@{}}\textbf{Projekt-}\\\textbf{nummer}\end{tabular} &
+\textbf{Titel} &
+\begin{tabular}[t]{@{}l@{}}\textbf{beteiligte}\\\textbf{Projektleiter:innen}\end{tabular} &
+\multicolumn{1}{c}{\cellcolor{white}\rotatehead{Mathematik}} &
+\multicolumn{1}{c}{\cellcolor{white}\rotatehead{Informatik}} &
+\multicolumn{1}{c}{\cellcolor{white}\rotatehead{Bioinformatik}} &
+\multicolumn{1}{c||}{\cellcolor{white}\rotatehead{andere$^a$}} &
+\begin{tabular}[t]{@{}c@{}}\textbf{Förder-}\\\textbf{beginn}\end{tabular} &
+\begin{tabular}[t]{@{}l@{}}\textbf{Art der}\\\textbf{Förderung}\end{tabular} \\
+\hline
+
+%1. Zeile
+\cellcolor{gray!30} 437702916 &
+Illustrative Visualisierung der Unsicherheit in Dynamischen Molekülstrukturen &
+Michael Krone\newline Kai Lawonn &
+&
+\cellcolor{red!20}\checkmark &
+&
+\cellcolor{gray!20} \checkmark &
+2020 &
+Sachbeihilfen \\
+\hline
+
+%2. Zeile
+\cellcolor{gray!30} 455913229 &
+Interaktive Argumentationsunterstützung für die wissenschaftliche Domäne der Invasionsbiologie &
+Tina Heger\newline Birgitta König-Ries\newline Sina Zarrieß &
+&
+\cellcolor{red!20}\checkmark &
+&
+\cellcolor{gray!20} \checkmark &
+2021 &
+Teilprojekt\newline SPP$^b$ 1999 \\
+\hline
+
+%3. Zeile
+\cellcolor{gray!30} 392255916 &
+Die reelle Theorie der Funktionenräume und ihre Anwendungen &
+Dorothee Haroske &
+\cellcolor{blue!20}\checkmark &
+&
+&
+&
+2018 &
+Sachbeihilfen \\
+\hline
+
+%4. Zeile
+\cellcolor{gray!30} 442235491 &
+Krümmungsmaße in der Konvex- und Integralgeometrie &
+Thomas Wannerer &
+\cellcolor{blue!20}\checkmark &
+&
+&
+&
+2020 &
+Sachbeihilfen \\
+\hline
+
+%5. Zeile
+\cellcolor{gray!30} 460129525 &
+NFDI4Microbiota - Nationale Forschungsdateninfrastruktur für Mikrobiota-Forschung &
+Manja Marz$^c$ &
+&
+\cellcolor{red!20}\checkmark &
+\cellcolor{green!20}\checkmark &
+\cellcolor{gray!20}\checkmark &
+2021 &
+NFDI$^d$ \\
+\hline
+
+%6. Zeile
+\cellcolor{gray!30} 218627073 &
+Virale Diversität, Viren-de novo-Assemblierung und Virenabbau in Grundwasser &
+Manja Marz &
+&
+&
+\cellcolor{green!20}\checkmark &
+\cellcolor{gray!20}\checkmark &
+2017 &
+Teilprojekt\newline SFB$^b$ 1076 \\
+\hline
+
+%7. Zeile
+\cellcolor{gray!30} 324792648 &
+Identifizierung unbekannter Substanzen: Fragmentierungsbäume und Molekulare Fingerabdrücke &
+Sebastian Böcker &
+&
+&
+\cellcolor{green!20}\checkmark &
+\cellcolor{gray!20}\checkmark &
+2016 &
+Sachbeihilfen\newline 1076 \\
+\hline
+
+\end{tabular}
+
+\vspace{5pt}
+\footnotesize
+$^a$Wissenschaften im Bereich der Lebenswissenschaften\newline
+$^b$Schwerpunktprogramm\newline
+$^c$Wissenschaftler:innen außerhalb der FSU sind hier nicht aufgeführt\newline
+$^d$Nationale Forschungsdateninfrastruktur
+
+\end{sidewaystable}
 
 
 
@@ -222,9 +342,7 @@ Ich finde so alte Logos wie das der Friedrich-Schiller-Universität Jena (\autor
 
 
 
-
-
-
+\newpage
 
 \section{Mathematik und Informatik}
 
