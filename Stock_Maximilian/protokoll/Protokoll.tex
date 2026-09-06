@@ -1,0 +1,250 @@
+\documentclass[titlepage]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{blindtext}
+
+\usepackage{multicol}
+
+%Schriftarten (ich verwende pdfLaTeX)
+\usepackage{noto}
+\usepackage[sfdefault]{roboto}
+\usepackage{roboto-mono}
+
+\usepackage{setspace}
+
+%Kopf- und Fußzeile
+\usepackage[headsepline=0.5pt, footsepline=0.5pt]{scrlayer-scrpage}
+\clearpairofpagestyles
+\automark{section}
+\ihead{Maximilian Stock -- 166816}
+\ohead{\headmark}
+\cfoot{\thepage\ von \pageref{LastPage}}
+\addtokomafont{pageheadfoot}{\sffamily\scshape} %serifenlose Kapitälchen
+
+%Titelseite
+\title{\LaTeX\ Grundlagen für Naturwissenschaftler und Informatiker -- Protokoll}
+\date{24.08. - 28.08. 2026}
+\author{Maximilian Stock (166816)}
+
+%Sections
+\addtokomafont{section}{\sffamily\bfseries\large}
+\renewcommand*{\sectionformat}{\thesection)\hspace{0.3cm}}
+\RedeclareSectionCommand[beforeskip=1cm]{section}
+
+\setlength{\parindent}{0pt}
+
+%Für die gepunktete Linie der Fußnote (im Handout habe ich keine entsprechende Möglichkeit gefunden).
+\usepackage{dashrule} 
+\renewcommand{\footnoterule}{
+  \hdashrule{\textwidth}{0.1pt}{1pt}
+  \kern 2pt
+}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+
+\colorlet{pastellblau}{blue!3!white}
+
+\usepackage{graphicx}
+\graphicspath{{bilder/}}
+
+\usepackage{hyperref}
+
+\usepackage{wrapfig}
+
+%Für die Tabelle in Aufgabe 23
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{rotating}
+\usepackage{pifont}
+\newcommand{\rotatehead}[1]{\rotatebox{45}{\parbox{2.2cm}{\raggedright\bfseries #1}}}
+
+
+
+
+
+
+%soll als letztes Paket eingebunden werden (diesen Kommentar am Ende wieder löschen)
+%TODO: obigen Kommentar wieder löschen!
+\usepackage[top=3cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{2}
+\setlength{\skip\footins}{1cm}
+
+\section*{Was ist \LaTeX\ und wofür will ich es verwenden?}
+\addcontentsline{toc}{section}{Was ist \LaTeX\ und wofür will ich es verwenden?}
+
+\TeX\ ist ein betriebssystemunabhängiges, sehr gut dokumentiertes Open Source Computerprogramm zum Setzen von Dokumenten, in dem die Formatierung mittels Befehlen markiert wird. Die Textdatei kann dabei in eine Binärdatei einer Seitenbeschreibungssprache wie beispielsweise PDF umgewandelt werden. Zu den Stärken von \TeX\ gelten unter anderem der ausgereifte mathematische Formelsatz und das saubere Layout. \\
+\LaTeX\ hingegen ist ein Softwarepaket, das die Nutzung von \TeX\ durch \TeX -Makros für den durchschnittlichen Anwender deutlich vereinfacht und erweitert. Auch aufgrund der automatischen Nummerierung von Kapitel, Abschnitten, Sätzen und Gleichungen, sowie der einfachen Implementierung von Querverweisen, ist \LaTeX\ der wohl am einfachsten zu erlernende und am besten gepflegte Zugang zu \TeX , und im wissenschaftlichen Kontext quasi Standard.
+\begin{wrapfigure}[10]{r}{0.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth, keepaspectratio]{wurzel.png}
+\end{wrapfigure}
+Ich persönlich nutze \LaTeX\ bereits seit einigen Jahren und habe hierfür die Grundlagen teils in der Schule gelernt, teils mir selbst beigebracht. Aufgrund meiner anstehenden Masterarbeit hielt ich es für durchaus sinnvoll, eine Auffrischung sowie Erweiterung meines Wissens über \LaTeX\ zu erhalten. Darüber hinaus wird im gemeinnützigen Wurzel e.V., in dem ich seit einigen Jahren ehrenamtlich aktiv bin, \LaTeX\ für die Erstellung der gleichnamigen Zeitschrift sowie für Einladungen und Verträge für die Schülerakademie Mathematik (SAM) des Vereins verwendet\footnote{Die nächste SAM findet vom 20. bis 27. März 2027 in Limbach (Vogtland) statt. Ich würde mich freuen, wenn Manja mal wieder einen Vortrag vor Ort halten könnte.}.
+
+
+
+
+\section{Grundlagen}
+
+\begin{onehalfspace}
+    \blindtext
+\end{onehalfspace}
+
+\setlength{\columnsep}{1cm}
+\setlength{\columnseprule}{2pt}
+
+
+\begin{multicols}{2} %geht jetzt über 2 Seiten. Falls das unerwünscht wäre, könnte man wie bei der kommenden Liste eine minipage draus machen.
+    \blindtext
+\end{multicols}
+
+
+
+\newpage %Damit nur diese eine Seite "pastellblau" gefärbt ist.
+\section{Text Formatierung}
+
+\pagecolor{pastellblau}
+
+\begin{minipage}{\textwidth} %Damit die Liste auf einer Seite ist.
+
+\hrule %Ich war mir nicht sicher, ob die horizontalen Linien mit gesetzt werden sollen...
+
+\vspace{5pt}
+
+\textbf{Was macht \TeX\ so besonders?}
+
+\renewcommand{\labelitemi}{>}
+
+\begin{itemize}
+    \item eine besondere Stärke ist der ausgereifte mathematische Formelsatz sowie das sehr saubere Schriftbild
+    \item Der Textsatz erfolgt absatzweise statt zeilenweise. Hierfür verwendet \TeX\ folgende Optimierungsalgorithmen:
+
+    \renewcommand{\theenumi}{A\arabic{enumi}}
+    \renewcommand{\labelenumi}{(\theenumi)}
+
+    \begin{enumerate}
+        \item Worttrennungsalgorithmus \label{algo_a1}
+        \item Zeilenumbruchoptimierung \label{algo_a2}
+        \item Seitenumbruchoptimierung \label{algo_a3}
+    \end{enumerate}
+
+    \item Dabei funktioniert Algorithmus \ref{algo_a2} natürlich in Verbindung mit Algorithmus \ref{algo_a1}
+
+\end{itemize}
+
+\end{minipage}
+
+\vspace{5pt}
+
+\hrule
+
+
+
+\setlength{\fboxrule}{1pt}
+\setlength{\fboxsep}{0.5cm}
+
+\framebox[\textwidth]{
+  \parbox[t]{0.2\textwidth}{
+    Das ist mein linker Textblock. Er nimmt 20\% der gesamten Textbreite ein und ist an der obersten Zeile ausgerichtet.
+  }
+  \hfill
+  \parbox[m]{0.6\textwidth}{
+    Das ist mein rechter Textblock. Er nimmt 60\% der gesamten Textbreite ein und ist vertikal mittig ausgerichtet. Der Bereich zwischen uns wurde mit Leerraum gefüllt. Um beide Blöcke herum wurde eine Box mit Rahmen gezeichnet, welche die gesamte Textbreite einnimmt. Der Rahmen ist 1 pt dick und 5 mm vom Text entfernt.
+  }
+}
+
+
+
+\begin{tcolorbox}[
+  colframe=Purple,
+  colback=Purple!5!white,
+  colbacktitle=Purple,
+  title=Die Kunst des Programmierens,
+]
+  Donald Ervin Knuth, Urheber des Textsatzsystems \TeX, über die Kunst des Programmierens:
+
+  \begin{quote}
+    The best programs are written so that computing machines can perform them quickly and so that human beings can understand them clearly. A programmer is ideally an essayist who works with traditional aesthetic and literary forms as well as mathematical concepts, to communicate the way that an algorithm works and to convince a reader that the results will be correct.
+  \end{quote}
+
+  \tcblower
+
+  \raggedleft
+  \itshape Donald E. Knuth, Selected Papers on Computer Science
+\end{tcolorbox}
+
+\newpage
+
+\pagecolor{white}
+
+
+
+
+\section{Abbildungen und Tabellen}
+
+Ich finde so alte Logos wie das der Friedrich-Schiller-Universität Jena (\autoref{fig:fsu_logo}) meistens ziemlich cool.
+
+\begin{figure}[!b]
+    \centering
+    \includegraphics[width=10cm]{uni_jena_logo.jpg}
+    \caption{Die Friedrich-Schiller-Universität Jena beherbergte im Wintersemester 2024/25 ganze 16.552 Studierende sowie 10.022 Mitarbeiter.}
+    \label{fig:fsu_logo}
+\end{figure}
+
+
+
+
+%TODO: Hier die Tabelle auf Seite 8 aus Aufgaben.pdf einfügen
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Mathematik und Informatik}
+
+
+\section{Großprojekte}
+
+
+\section{Spezielle \LaTeX \ Dokumente}
+
+
+
+
+
+\newpage
+\listoffigures
+
+\label{LastPage} %Für Angabe der Gesamtseitenzahl in Fußzeile
+\end{document}
+
+
+%TODOs:
+%checken, ob die Sections tatsächlich oben recht in der Kopfzeile angezeigt werden.
+%eventuell \newpage nach jedem Abschnitt einfügen
