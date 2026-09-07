@@ -1,0 +1,11 @@
+\chapter{Anmerkungen}
+
+\begin{enumerate}
+    \item Wenn Spieler unterschiedliche Entwicklungsfaktoren haben, kann sich ein Spielergebnis unterschiedlich stark auf deren Elo-Zahl auswirken, sodass keine reine Umverteilung von Punkten stattfindet. Ähnlich kann es sein, wenn einer der Spieler vorher noch keine Elo-Zahl hatte.
+    \item Der Erwartungswert darf also nicht mit der Gewinnwahrscheinlichkeit verwechselt werden, weil er offen lässt, ob die Punkte durch Siege, Remis oder durch eine Kombination aus beiden erreicht werden. So hat ein Spieler beispielsweise einen Erwartungswert in einer Partie von $0,5$, sowohl wenn er voraussichtlich alle Partien remisiert, als auch, wenn er je die Hälfte der Partien gewinnt und verliert. Im Bezug auf die Gewinnquote gibt der Erwartungswert also nur Auskunft darüber, wie viele Gewinnspiele \textit{maximal} zu erwarten sind. Bei einem Erwartungswert von $E = x$ sind das nicht mehr als $x \cdot 100$ Prozent der Spiele.
+    \item atsächlich kann man das Harkness-System als eine stückweise lineare Approximation an das Elo-Modell auffassen.
+    \item Aus der Modellierung der erwarteten Punktzahl als $E_{A} = 1 / 10^{(R_{B} - R_{A}) / 400}$ folgt $10^{(R_{B} - R_{A}) / 400} = 1 / E_{A} - 1$, und daraus ergibt sich für die Elo-Differenz der Spieler $R_{B} - R_{A} = 400 \cdot \log_{10} (1 / E_{A} - 1)$.
+    \item Mit $E_{A} = 0,75$ ergibt sich eine Wertungsdifferenz von rund $191$:
+\end{enumerate}
+
+%PLATZHALTER: Formel R_B - R_A einfügen :*

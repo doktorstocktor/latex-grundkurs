@@ -58,20 +58,69 @@ Im Schach hat $k$ im Regelfall den Wert $40$, $20$ oder $10$:
 
 Ausnahmsweise kann $k$ für einen Spieler in einer einzelnen Wertungsperiode einen abweichenden Wert annehmen, da das Produkt aus $k$ und der Anzahl der für einen Spieler in einer Wertungsperiode ausgewerteten Partien ($n$) kleiner als $700$ sein muss. In diesem Fall wird $k$ auf die größte natürliche Zahl abgesenkt, für die $k \cdot n < 700$ gilt.
 
-
-
+Im Schweizer Tischtennis gilt $k = 15$ einheitlich für alle Spieler.
 
 
 \subsection{Anpassung nach einer Partie}
 
+Beispiel: Alfred ($R_{A} = 2306$) spielt gegen Berta ($R_{B} = 2077$). Das entspricht einem Wertungsunterschied $R_{A} - R_{B} = 229$. Zu erwarten ist, dass Alfred gegen Berta im Mittel $0,789$ Punkte pro Spiel erzielt:
+
+%PLATZHALTER: Formel Berechnung E_A.
+
+Nach einer Partie gibt es drei Möglichkeiten (angenommen sei dabei $k = 20$ für beide Spieler):
+
+\paragraph{a) Berta gewinnt}-- \ also $S_{A} = 0$.
+Die neuen Elo-Punktestände $R'_{A}$ für Alfred und $R'_{B}$ für Berta sind
+
+%PLATZHALTER: Formel R'_A und R'_B
+
+Alfred büßt $16$ Elo-Punkte ein, während Berta $16$ Elo-Punkte hinzugewinnt.
+
+\paragraph{b) Alfred gewinnt}-- \ also $S_{A} = 1$.
+
+%PLATZHALTER: Formel R'_A und R'_B
+
+Alfred erhält $4$ Elo-Punkte, Berta verliert $4$.
+
+\paragraph{c) Unentschieden}-- \ also $S_{A} = \frac{1}{2}$.
+
+%PLATZHALTER: Formel R'_A und R'_B
+
+Alfred verliert $6$ Elo-Punkte, Berta gewinnt $6$.
+
+
 \subsection{Maximaler Punktgewinn durch eine Partie}
+
+Ab welchem Wertungsunterschied (Elo-Differenz zwischen den Spielern) ist bei einem Sieg der maximale Elo-Punktgewinn möglich?
+
+Der maximal mögliche Elo-Punktgewinn/-verlust ist durch den $k$-Faktor festgelegt. Da Elo-Punkte auf ganze Zahlen gerundet werden, muss der rechnerische Punktgewinn $k \cdot (S_{A} - E_{A})$ mindestens $k - 0,5$ betragen. Demnach muss gelten (wegen $S_{A} = 1$):
+
+%PLATZHALTER: Formel
+
+Mit der Formel %Anmerkung 4 verweisen :)
+
+%PLATZHALTER Formel
+
+erhält man
+
+%PLATZHALTER Formel R_B - R_A
+
+für die $k$-Werte $10$, $20$ bzw. $40$. Ein Topspieler ($k = 10$) kann mit einer Partie maximal $10$ Elo-Punkte gewinnen und muss dafür einen Spieler mit einer um $512$ höheren Elo-Zahl besiegen.
+
 
 \subsection{Spiele gegen einen gleichstarken Spieler}
 
-
+Sind beide Spieler gleich stark, also $R_{B} - R_{A} = 0$, ist $E_{A} = 0,5$. Bei einem Sieg werden $k \cdot (1 - 0,5) = \frac{k}{2}$ Elo-Punkte hinzugewonnen, bei einer Niederlage gehen $\frac{k}{2}$ Elo-Punkte verloren. Bei einem Remis bleiben die Elo-Zahlen unverändert.
 
 
 \section{Elo-Performance}
 
+Als \textit{Elo-Performance} (auch \textit{Turnierleistung} genannt) bezeichnet man die in Elo-Punkten ausgedrückte Leistung eines Spielers in einem einzelnen Turnier. Im Gegensatz zur normalen Elo-Berechnung geht die vorherige Elo-Zahl nicht in diese Wertung ein.
 
+Die Elo-Performance $P$ ist rechnerisch die Elo-Zahl, die ein Spieler haben müsste, damit das erzielte Ergebnis $S$ gerade gleich dem Erwartungswert $E$ ist. Eine Näherungsformel ist
 
+%PLATZHALTER Formel für P. --> komma am Ende :)
+
+wobei $R_{G}$ das mittlere Rating der Gegner ist und $N$ die Zahl der gespielten Partien. Diese Näherung ist besonders gut, wenn $S/N$ nahe bei $0,5$ ist.
+
+Die Elo-Performance wird neben ihrem rein sportlichen Aussagewert als Kriterium zur Vergabe von Sonderpreisen gewählt, wenn ein anderer direkter Leistungsvergleich der Spieler nicht möglich ist -- z.\,B., um den besten Einzelspieler in einem Mannschaftsturnier zu bestimmen.

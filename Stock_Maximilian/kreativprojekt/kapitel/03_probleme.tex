@@ -1,1 +1,36 @@
 \chapter{Probleme und statistische Phänomene von Rating-Systemen}
+
+\section{Intransitivität von Wahrscheinlichkeitsrelationen}
+
+Ist Spieler $A$ gegenüber Spieler $B$ der Favorit und $B$ gegenüber $C$, so besitzt $A$ ein höheres Rating als $B$ und $B$ ein höheres als $C$. Damit besitzt $A$ ein höheres Rating als $C$ und \textit{müsste} Favorit gegenüber $C$ sein.
+
+Diese Folgerung ist aber keineswegs zwingend, da Wahrscheinlichkeits- bzw. Präferenzrelationen nicht notwendigerweise transitiv sind. Dieses Problem ist keine Besonderheit des Elo-Systems, sondern ein prinzipielles Problem aller Rating-Systeme. (vgl. Condorcet-Paradoxon, \glqq Chinesische Würfel\grqq\ oder \glqq Intransitive Würfel\grqq )
+
+Transitivität ist jedoch eine notwendige Voraussetzung für ein sinnvolles Rating-System. Um diese Eigenschaft zu sichern, setzte Arpad Elo bei der Entwicklung seines Rating-Systems voraus, dass das zu erwartende Spielergebnis in Abhängigkeit der Spielstärken mithilfe der Formel $E_{A} = 1 / (1 + 10^{(R_{B} - R_{A}) / 400})$ beschreibbar ist. Aus dieser Annahme folgt neben der Transitivität auch die oben dargestellte Multiplikativität der Erwartungswerte.
+
+
+\section{Deflation und Inflation}
+
+Will man mithilfe der Elo-Zahlen -- oder anderer Ratings, dies betrifft nicht nur das Elo-System -- die Stärken von Spielern aus unterschiedlichen Epochen vergleichen, so sollte ein Rating von z.\,B. $1600$ aus dem Jahre 1970 gleichbedeutend mit einem Rating von $1600$ aus dem Jahre 2000 sein. Insbesondere sollte, da sich infolge der Weiterentwicklung der Theorie die durchschnittliche Spielstärke im Laufe der Zeit zumindest nicht verschlechtert, sich die mittlere Ratingzahl nicht verringern.
+
+Beim Elo-System gewinnt der Sieger einer Partie genau so viele Rating-Punkte hinzu, wie der Verlierer einbüßt (falls beide den gleichen $k$-Faktor zur Berechnung nutzen): die mittlere Spielstärke beider bleibt gleich. Umfasst der \textit{Rating-Pool} (die Rangliste) nur starke Spieler, so ist folgendes Phänomen zu beobachten: Sooft ein Spieler neu in die Ratings aufgenommen wird, tritt er mit einer gewissen (niedrigen) Punktezahl ein. Im Laufe seiner Karriere verbessert er seine Stärke, gewinnt Punkte hinzu und scheidet später mit einer (hohen) Punktezahl aus – dadurch werden der Gesamtheit Punkte entzogen, und die mittlere Ratingzahl sinkt; d.\,h., das System ist deflationär.
+
+Vergrößert man den Rating-Pool auch auf schwächere Spieler, so tritt der entgegengesetzte Effekt auf: Viele Spieler verlassen den Rating-Pool mit einem niedrigeren Rating, als ihnen bei Eintritt zugemessen wurde -- das System wird nun inflationär.
+
+Dies war insbesondere früher der Fall, als der Weltschachbund FIDE Schachspieler erst ab einer Wertungszahl von $2200$ in die Rangliste aufnahm. Da die Elo-Auswertung von Turnieren gebührenpflichtig ist und damit für die FIDE eine Einnahmequelle darstellt, wurde diese Schwelle immer weiter herab gesenkt, zuletzt auf $1000$. Dennoch lässt es sich nicht vermeiden, dass viele Spieler den Rating-Pool mit niedrigeren Wertungszahlen verlassen als sie bei Eintritt erhielten. Eine maßvolle Inflation ist jedoch durchaus erwünscht, diese sollte in ihrem Ausmaß der Weiterentwicklung der Spielstärken im Laufe der Zeit Rechnung tragen, allerdings ergibt sich hier zumeist das Problem einer zu großen Inflation.
+
+So konnten die Elo-Zahlen immer neue Rekorde erreichen, ohne eigentlich noch ein absolutes Maß für die Spielstärke zu sein. Im Jahr 2000 gab es nur einen Spieler (Kasparow) mit einer Elo-Zahl größer $2800$, elf Spieler größer $2700$, und etwa $90$ erreichten einen Wert über $2600$. Im Juli 2010 hatten bereits über $200$ aktive Spieler eine Elo-Zahl größer $2600$, davon $37$ mindestens $2700$; drei Spieler hatten sogar eine Elozahl von $2800$ oder höher, was 20 Jahre zuvor undenkbar schien.
+
+Die durchschnittliche Elo-Zahl der ersten $100$ Spieler der Weltrangliste stieg zwischen Juli 2000 und Juli 2012 von $2644$ auf $2703$ Punkte, also eine Steigerung um $59$ Wertungspunkte. Von 2012 bis 2023 lag der Mittelwert recht konstant zwischen $2700$ und $2706$, seit 2024 liegt er unter $2700$.
+
+
+\section{Das Tausend-Partien-Problem}
+
+Ein weiteres Phänomen ist das sogenannte \textit{Tausend-Partien-Problem}. Oft treffen Spieler der gleichen Spielstärke immer wieder aufeinander. Angenommen, zwei Spieler mit Elo $2000$ spielen zehn Partien, bei denen der eine $80 \%$ der Punkte erreicht. Nach der Berechnung der neuen Elo-Zahl ergeben sich die Werte $2080$ für den Sieger und $1920$ für den Verlierer. Tragen die beiden Spieler jedoch $1000$ Partien mit gleichem Punkteverhältnis aus, ohne dass die Wertung aktualisiert wird, so ergibt sich für den Sieger eine neue Wertungszahl, die höher als die des aktuellen Weltmeisters ist. Jedoch ist dieses Szenario nur theoretischer Natur. Nach dem Statistikgesetz der großen Zahl darf man erwarten, dass die beiden gleich starken Spieler (beide hatten Elo $2000$) sich nach vielen Partien den zu erwartenden $50 \%$ annähern. Zudem wird es in der Praxis nie $1000$ Partien ohne Ratingaktualisierung geben.
+
+Die Entwicklung der Wertzahlen wird auch von der Auswertungsperiode beeinflusst. Nach einer Testphase mit unregelmäßigen Veröffentlichungen wurde von 1975 bis 1980 einmal jährlich im Januar eine neue Liste veröffentlicht. Beginnend im Juli 1981 wurde auf halbjährliche Veröffentlichung umgestellt und dies bis Juli 2000 so beibehalten. Im Oktober 2000 wurde dann auf Veröffentlichung alle drei Monate umgestellt. Von Juli 2009 bis Juli 2012 wurde alle zwei Monate ausgewertet. Seit August 2012 wird monatlich ausgewertet. Die minimale Wertungszahl beträgt seitdem 1000 Punkte, zuvor lag sie bei 1200. Sinnvoll wäre prinzipiell eine Auswertung nach jedem Turnier, da so Formschwankungen von Spielern besser ausgeglichen werden können. Allerdings ist das derzeit nicht geplant.
+
+
+\section{Schwankungsbreite und Aussagekraft}
+
+Die Wertungszahlen eines einzelnen Spielers sind intervallskaliert und annähernd normalverteilt und schwanken mit einer Standardabweichung von $200$ um einen mittleren Wert. Es gibt viele Schachspieler mit Spielstärken unter $1200$. Auf diesem Spielniveau ist das Elo-System in der Vorhersagesicherheit aber nur eingeschränkt anwendbar. Wichtig ist insbesondere auf Hobbyspielerniveau, dass ein Spieler seine Zahl auch gegen stärkere Gegner verteidigen kann, ohne sich auf besondere Eigenschaften wie unbewusste psychische Schwächen oder schlechtes Zeitmanagement von Neulingen konzentrieren zu müssen. Utopisch hohe Werte werden durch Niederlagen schnell, exakt und zuverlässig korrigiert. Die recht stabile Elo-Zahl wird mit verschiedenen Verfahren ermittelt. Manche gehen von wenigen Spielen aus oder von ähnlich starken Turnierteilnehmern. Nach vielen Partien erreichen aber alle sehr ähnliche Gleichgewichte. Bei Computern ist die Verteilung nicht nur per $200$-Punkte-Definition gleich, sondern auch vom Kurvenverhalten her darüber hinaus sehr ähnlich, allerdings gibt es bei ähnlich starken Maschinen eine weitere Spielstärkenspreizung in den verschiedenen Partiephasen.
