@@ -4,6 +4,6 @@
 \contentsline {section}{\numberline {2}Text Formatierung}{5}{section.2}%
 \contentsline {section}{\numberline {3}Abbildungen und Tabellen}{6}{section.3}%
 \contentsline {section}{\numberline {4}Mathematik und Informatik}{8}{section.4}%
-\contentsline {section}{\numberline {5}Großprojekte}{11}{section.5}%
-\contentsline {section}{\numberline {6}Spezielle \LaTeX \ Dokumente}{11}{section.6}%
+\contentsline {section}{\numberline {5}Großprojekte}{10}{section.5}%
+\contentsline {section}{\numberline {6}Spezielle \LaTeX \ Dokumente}{10}{section.6}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

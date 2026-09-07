@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2026.8.27)  7 SEP 2026 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2026.8.27)  7 SEP 2026 11:39
 entering extended mode
 **./Protokoll.tex
 (Protokoll.tex
@@ -1191,7 +1191,7 @@ LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
 (Font)              `T1/Roboto-LF/regular/n' on input line 473.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
 (Font)              scaled to size 10.0pt on input line 473.
- (anchorna-alimerge.py [9] [10]) [11] (Protokoll.lof)
+ (anchorna-alimerge.py [9]) [10] (Protokoll.lof)
 \tf@lof=\write8
 \openout8 = `Protokoll.lof'.
 
@@ -1199,22 +1199,22 @@ LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
 \tf@lot=\write9
 \openout9 = `Protokoll.lot'.
 
- [12] (Protokoll.aux)
+ [11] (Protokoll.aux)
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27781 strings out of 480237
- 556827 string characters out of 2878207
- 1493601 words of memory out of 3000000
- 43601 multiletter control sequences out of 15000+200000
+ 27671 strings out of 480237
+ 555317 string characters out of 2878207
+ 1343601 words of memory out of 3000000
+ 43557 multiletter control sequences out of 15000+200000
  641713 words of font info for 123 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,20n,111p,10606b,2166s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 107i,20n,111p,10606b,2274s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/roboto/rbto_shbyjm.enc}{C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/roboto/rbto_b5rac7.enc}{C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/roboto/rbto_ocbbsb.enc}<C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/google/roboto/Roboto-Bold.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/google/roboto/Roboto-Italic.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/google/roboto/Roboto-Regular.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmb10.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Protokoll.pdf (12 pages, 643966 bytes).
+Output written on Protokoll.pdf (11 pages, 624208 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
- 160 named destinations out of 1000 (max. 500000)
+ 287 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 
