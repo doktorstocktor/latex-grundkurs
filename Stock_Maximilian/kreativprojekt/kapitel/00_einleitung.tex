@@ -1,9 +1,28 @@
 %\chapter{Einleitung}
-%TODO: oben steht wegen fehlendem chapter jetzt Tabellenverzeichnis auf der Seite...
 
-Die \textbf{Elo-Zahl} (auch \textbf{Elozahl}) ist eine Wertungszahl, welche die Spielstärke von Schachspielern beschreibt. Sie wurde nach ihrem Erfinder Arpad Elo benannt. Inzwischen wurde das Konzept auch für andere Spiele und Sportarten adaptiert (s.\,u.).
+\clearpage
+\markboth{}{}
+\thispagestyle{plain} %Damit auf der Seite oben nicht "Tabellenverzeichnis" steht.
+
+Die \textbf{Elo-Zahl} (auch \textbf{Elozahl}) ist eine Wertungszahl, welche die Spielstärke von Schachspielern (\autoref{fig:schach}) beschreibt. Sie wurde nach ihrem Erfinder Arpad Elo benannt. Inzwischen wurde das Konzept auch für andere Spiele (\autoref{fig:go}) und Sportarten adaptiert (s.\,u.).
 
 Ausgehend vom \textit{Bradley-Terry-Modell} (benannt nach R. A. Bradley und M. E. Terry, die es im Jahr 1952 präsentierten), das wiederum auf einer Arbeit von Ernst Zermelo aus den 1920er Jahren basiert, entwickelte Arpad Elo 1960 ein objektives Wertungssystem für den US-amerikanischen Schachverband USCF. Es wurde 1970 auf dem Kongress in Siegen vom Weltschachverband FIDE übernommen. Der Weltschachverband nennt sein System \textit{FIDE rating system}. Eine Wertungszahl heißt offiziell \textit{FIDE rating}, wird umgangssprachlich aber zumeist einfach als \glqq Elo-Zahl\grqq\ bezeichnet. Neben dem internationalen Wertungssystem der FIDE existieren auch nationale Wertungssysteme mit unterschiedlichen Namen. In Deutschland heißt das nationale Wertungssystem \textit{Deutsche Wertungszahl (DWZ)}, in Österreich werden \textit{(nationale) Elo-Zahlen} berechnet, und in der Schweiz gibt es eine \textit{Führungsliste} mit \textit{Führungszahlen}. Diese Systeme werten wesentlich mehr lokale Turniere aus, berechnen die Wertungszahlen aber ebenso nach den Methoden von Arpad Elo mit meist nur geringen Modifikationen und abweichenden Faktoren.
 
-%PLATZHALTER: Abbildung Schach
-%PLATZHALTER: Abbildung Go
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{schach.jpg}
+        \caption{Schach}
+        \label{fig:schach}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{go.jpg}
+        \caption{Go}
+        \label{fig:go}
+    \end{subfigure}
+    \caption{Sowohl bei Schach- also auch bei Go-SpielerInnen kann die Elo-Zahl die Spielstärke beschreiben.}
+    \label{fig:schach_go}
+\end{figure}

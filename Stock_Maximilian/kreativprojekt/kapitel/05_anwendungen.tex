@@ -4,7 +4,36 @@
 
 Bei Go wird die Spielstärke traditionell in Kyū-Graden für Schüler und Dan-Graden für Meister angegeben. Die Ermittlung dieser Spielstärke basiert innerhalb der \textit{European Go Federation} und bei vielen Go-Servern im Internet auf einem von Elo abgeleiteten System, welches Kyū- und Dan-Grade wie folgt abbildet:
 
-%PLATZHALTER: Tabelle kyu/dan Grade
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{l | c | l}
+        \toprule
+        \textbf{kyū/dan} & \textbf{Elo} & \textbf{Spielstärke und -erfahrung} \\
+        \midrule
+        weltbeste & $5185$ & AlphaGo Zero auf einem TPU-v2-Modul mit \\
+        9p-KI & & 180 TFLOPS \\
+        weltbester & $3830$ & Shin Jin-Seo, weltbester Go-Spieler \\
+        9p-Spieler & & \\
+        1p - 9p & ab circa $2600$ & professioneller Go-Spieler (aus Japan, Korea oder \\
+        & & China), der stärker als ein Amateur-6dan spielt \\
+        4d - 7d & ab $2350$ & einer der besten Spieler seines Landes \\
+        1d - 3d & $2050 - 2349$ & sehr guter Club-Spieler \\
+        4k - 1k & $1650 - 2049$ & guter Club-Spieler \\
+        9k - 5k & $1150 - 1649$ & regelmäßiger Club-Spieler \\
+        13k - 10k & $750 - 1149$ & Club-Spieler \\
+        17k - 14k & $350 - 749$ & regelmäßiger Hobby-Spieler \\
+        21k - 18k & $0 - 349$ & Hobby-Spieler \\
+        24k - 22k &  & einige Partien gegen Nicht-Anfänger gewonnen \\
+        27k - 25k &  & einige Partien gegen Anfänger gewonnen \\
+        29k - 28k &  & einige Partien gespielt \\
+        30k &  & Regeln verstanden, aber noch keine Partie gespielt \\
+        \bottomrule
+    \end{tabular}
+    \caption{Die European Go Federation leitet die Spielstärke aus der Elo ab.}
+    \label{tab:go_elo}
+\end{table}
+
+
 
 
 \section{Fußball}

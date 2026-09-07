@@ -17,9 +17,27 @@ Da genau ein Punkt auf beide Spieler verteilt wird, muss gelten:
     E_{A} + E_{B} = 1
 \]
 
-%PLATZHALTER: Tabelle mit Werten für E_A und E_B eventuell (daneben??) einfügen
+\begin{wraptable}{r}{0.37\textwidth}
+    \centering
+    \begin{tabular}{c c r}
+        \toprule
+        $R_{A} - R_{B}$ & $E_{A}$ & $E_{B}$ \\
+        \midrule
+        $0$   & $50,0 \%$ & $50,0 \%$ \\
+        $50$  & $57,1 \%$ & $42,9 \%$ \\
+        $100$ & $64,0 \%$ & $36,0 \%$ \\
+        $200$ & $76,0 \%$ & $24,0 \%$ \\
+        $300$ & $84,9 \%$ & $15,1 \%$ \\
+        $400$ & $90,9 \%$ & $9,1 \%$  \\
+        $500$ & $94,7 \%$ & $5,3 \%$  \\
+        \bottomrule
+    \end{tabular}
+    \caption{Erwartungswerte.}
+    \label{tab:erwartungswerte}
+\end{wraptable}
 
-Aus den Formeln für den Erwartungswert ergibt sich, dass diese Bedingung stets erfüllt ist.
+
+Aus den Formeln für den Erwartungswert ergibt sich, dass diese Bedingung stets erfüllt ist (\autoref{tab:erwartungswerte}).
 
 Die in der Formel enthaltene, willkürlich festgelegte Zahl $400$ legt die Abstufung der Elo-Skala fest: Bei einer Elo-Differenz von $400$ wird der Spieler höchstwahrscheinlich gewinnen ($E_{A} = 91 \%$). Die Zahl $400$ wurde von Arpad Elo so gewählt, damit die Elo-Zahlen mit den Wertungszahlen des früher verwendeten Schach-Rating-Systems von Kenneth Harkness möglichst gut kompatibel sind. Im Schweizer Tischtennis wird z.\,B. $200$ statt $400$ verwendet, im deutschen $150$, s.\,u. %TODO: mögliche Anmkerung 3
 
