@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2026.8.27)  7 SEP 2026 01:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2026.8.27)  7 SEP 2026 08:15
 entering extended mode
 **./Protokoll.tex
 (Protokoll.tex
@@ -749,14 +749,24 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \rotFPbot=\skip72
 \rot@float@box=\box113
 \rot@mess@toks=\toks37
-) (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+) (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count316
+\float@exts=\toks38
+\float@box=\box114
+\@float@everytoks=\toks39
+\@floatcapt=\box115
+)
+\@float@every@infobox=\toks40
+\c@infobox=\count317
+ (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count316
-\Gm@cntv=\count317
-\c@Gm@tempcnt=\count318
+\Gm@cnth=\count318
+\Gm@cntv=\count319
+\c@Gm@tempcnt=\count320
 \Gm@bindingoffset=\dimen268
 \Gm@wd@mp=\dimen269
 \Gm@odd@mp=\dimen270
@@ -765,50 +775,51 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen273
 \Gm@layouthoffset=\dimen274
 \Gm@layoutvoffset=\dimen275
-\Gm@dimlist=\toks38
+\Gm@dimlist=\toks41
  (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count319
-\l__pdf_internal_box=\box114
+\l__kernel_color_stack_int=\count321
+\l__pdf_internal_box=\box116
 ) (Protokoll.aux)
 \openout1 = `Protokoll.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-\c@mv@tabular=\count320
-\c@mv@boldtabular=\count321
- (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+\c@mv@tabular=\count322
+\c@mv@boldtabular=\count323
+
+(C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count322
+\scratchcounter=\count324
 \scratchdimen=\dimen276
-\scratchbox=\box115
-\nofMPsegments=\count323
-\nofMParguments=\count324
-\everyMPshowfont=\toks39
-\MPscratchCnt=\count325
+\scratchbox=\box117
+\nofMPsegments=\count325
+\nofMParguments=\count326
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count327
 \MPscratchDim=\dimen277
-\MPnumerator=\count326
-\makeMPintoPDFobject=\count327
-\everyMPtoPDFconversion=\toks40
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
+\everyMPtoPDFconversion=\toks43
 ) (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
-Package hyperref Info: Link coloring OFF on input line 82.
+Package hyperref Info: Link coloring OFF on input line 88.
  (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
@@ -816,11 +827,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count328
+\c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 82.
-LaTeX Info: Redefining \pageref on input line 82.
-LaTeX Info: Redefining \nameref on input line 82.
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
  (Protokoll.out) (Protokoll.out)
 \@outlinefile=\write6
 \openout6 = `Protokoll.out'.
@@ -832,12 +843,12 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 82.
+(scrartcl)           before \begin{document} on input line 88.
  (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count329
+\BKM@id=\count331
 ))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -874,36 +885,36 @@ File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 85.
+(Font)              `T1/Roboto-LF/bold/n' on input line 91.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 10.95pt on input line 85.
+(Font)              scaled to size 10.95pt on input line 91.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 85.
+(Font)              `T1/Roboto-LF/bold/n' on input line 91.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 20.74pt on input line 85.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 85.
+(Font)              scaled to size 20.74pt on input line 91.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 91.
 (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 85.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 91.
  (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 85.
+(Font)              `T1/Roboto-LF/bold/n' on input line 91.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 14.4pt on input line 85.
+(Font)              scaled to size 14.4pt on input line 91.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 85.
+(Font)              `T1/Roboto-LF/regular/n' on input line 91.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 14.4pt on input line 85.
+(Font)              scaled to size 14.4pt on input line 91.
  [1
 
 {C:/Users/Maximilian/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
-(Font)              `T1/Roboto-LF/bold/n' on input line 87.
+(Font)              `T1/Roboto-LF/bold/n' on input line 93.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
-(Font)              scaled to size 12.0pt on input line 87.
+(Font)              scaled to size 12.0pt on input line 93.
  (Protokoll.toc
 LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' aliased to
 (Font)              `T1/Roboto-LF/bold/n' on input line 2.
@@ -914,56 +925,56 @@ LaTeX Font Info:    Font shape `T1/Roboto-LF/bold/n' will be
 \openout7 = `Protokoll.toc'.
 
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/sl' aliased to
-(Font)              `T1/Roboto-LF/regular/sl' on input line 88.
+(Font)              `T1/Roboto-LF/regular/sl' on input line 94.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/sl' in size <10.95> not available
-(Font)              Font shape `T1/Roboto-LF/regular/it' tried instead on input line 88.
+(Font)              Font shape `T1/Roboto-LF/regular/it' tried instead on input line 94.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/it' will be
-(Font)              scaled to size 10.95pt on input line 88.
+(Font)              scaled to size 10.95pt on input line 94.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/scsl' aliased to
-(Font)              `T1/Roboto-LF/regular/scsl' on input line 88.
+(Font)              `T1/Roboto-LF/regular/scsl' on input line 94.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/scsl' in size <10.95> not available
-(Font)              Font shape `T1/Roboto-LF/regular/scit' tried instead on input line 88.
+(Font)              Font shape `T1/Roboto-LF/regular/scit' tried instead on input line 94.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/scit' will be
-(Font)              scaled to size 10.95pt on input line 88.
+(Font)              scaled to size 10.95pt on input line 94.
  [2]
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 98.
+(Font)              `T1/Roboto-LF/regular/n' on input line 104.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 8.0pt on input line 98.
+(Font)              scaled to size 8.0pt on input line 104.
 <bilder//wurzel.png, id=35, 475.7775pt x 227.85126pt>
 File: bilder//wurzel.png Graphic file (type png)
 <use bilder//wurzel.png>
-Package pdftex.def Info: bilder//wurzel.png  used on input line 101.
+Package pdftex.def Info: bilder//wurzel.png  used on input line 107.
 (pdftex.def)             Requested size: 227.62209pt x 109.00925pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--102
+Underfull \hbox (badness 10000) in paragraph at lines 103--108
 \T1/Roboto-LF/regular/n/10.95 ge-pfleg-te Zu-gang zu T[]X, und im wis-sen-schaft-li-chen Kon-text qua-si Stan-dard.
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+Roboto-LF on input line 103.
+LaTeX Font Info:    Trying to load font information for TS1+Roboto-LF on input line 109.
 (C:\Users\Maximilian\AppData\Local\Programs\MiKTeX\tex/latex/roboto\ts1roboto-lf.fd
 File: TS1Roboto-LF.fd 2019/12/11 (autoinst) Font definitions for TS1/Roboto-LF.
 )
 LaTeX Font Info:    Font shape `TS1/Roboto-LF/m/n' aliased to
-(Font)              `TS1/Roboto-LF/regular/n' on input line 103.
+(Font)              `TS1/Roboto-LF/regular/n' on input line 109.
 LaTeX Font Info:    Font shape `TS1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 8.0pt on input line 103.
+(Font)              scaled to size 8.0pt on input line 109.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 103.
+(Font)              `T1/Roboto-LF/regular/n' on input line 109.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 9.0pt on input line 103.
+(Font)              scaled to size 9.0pt on input line 109.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' aliased to
-(Font)              `T1/Roboto-LF/regular/n' on input line 103.
+(Font)              `T1/Roboto-LF/regular/n' on input line 109.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 6.0pt on input line 103.
+(Font)              scaled to size 6.0pt on input line 109.
 LaTeX Font Info:    Font shape `TS1/Roboto-LF/m/n' aliased to
-(Font)              `TS1/Roboto-LF/regular/n' on input line 103.
+(Font)              `TS1/Roboto-LF/regular/n' on input line 109.
 LaTeX Font Info:    Font shape `TS1/Roboto-LF/regular/n' will be
-(Font)              scaled to size 6.0pt on input line 103.
+(Font)              scaled to size 6.0pt on input line 109.
 
 
 Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 3 might be wrong on input line 120.
+(multicol)                Footnotes on page 3 might be wrong on input line 126.
 
 
 Overfull \hbox (241.84846pt too wide) has occurred while \output is active
@@ -979,94 +990,111 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Overfull \vbox (10.70001pt too high) has occurred while \output is active []
 
  [3 <./bilder//wurzel.png>] [4]
-Underfull \hbox (badness 4013) in paragraph at lines 175--175
+Underfull \hbox (badness 4013) in paragraph at lines 181--181
 []\T1/Roboto-LF/regular/n/10.95 Das ist mein lin-
  []
 
 
-Underfull \hbox (badness 6412) in paragraph at lines 175--175
+Underfull \hbox (badness 6412) in paragraph at lines 181--181
 \T1/Roboto-LF/regular/n/10.95 ker Text-block. Er
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 175--175
+Underfull \hbox (badness 1635) in paragraph at lines 181--181
 \T1/Roboto-LF/regular/n/10.95 sam-ten Text-brei-te
  []
 
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/it' aliased to
-(Font)              `T1/Roboto-LF/regular/it' on input line 194.
+(Font)              `T1/Roboto-LF/regular/it' on input line 200.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/regular/it' will be
-(Font)              scaled to size 10.95pt on input line 194.
+(Font)              scaled to size 10.95pt on input line 200.
 [5]
 <bilder//uni_jena_logo.jpg, id=63, 1430.34375pt x 505.13719pt>
 File: bilder//uni_jena_logo.jpg Graphic file (type jpg)
 <use bilder//uni_jena_logo.jpg>
-Package pdftex.def Info: bilder//uni_jena_logo.jpg  used on input line 210.
+Package pdftex.def Info: bilder//uni_jena_logo.jpg  used on input line 216.
 (pdftex.def)             Requested size: 284.52756pt x 100.4784pt.
 Class scrartcl Info: Workaround for not recommended usage of \\ or
-(scrartcl)           \newlinein caption text  on input line 220.
+(scrartcl)           \newlinein caption text  on input line 226.
 
-Overfull \hbox (24.8115pt too wide) in paragraph at lines 234--234
+Overfull \hbox (24.8115pt too wide) in paragraph at lines 241--241
 []\T1/Roboto-LF/bold/n/10.95 Mathematik  
  []
 
 
-Overfull \hbox (17.04794pt too wide) in paragraph at lines 235--235
+Overfull \hbox (17.04794pt too wide) in paragraph at lines 242--242
 []\T1/Roboto-LF/bold/n/10.95 Informatik  
  []
 
 
-Overfull \hbox (32.83781pt too wide) in paragraph at lines 236--236
+Overfull \hbox (32.83781pt too wide) in paragraph at lines 243--243
 []\T1/Roboto-LF/bold/n/10.95 Bioinformatik  
  []
 
 
-Overfull \hbox (4.7509pt too wide) in paragraph at lines 237--237
+Overfull \hbox (4.7509pt too wide) in paragraph at lines 244--244
 []\T1/Roboto-LF/bold/n/10.95 andere$[]$  
  []
 
 
-Overfull \hbox (14.34657pt too wide) in paragraph at lines 224--327
+Overfull \hbox (14.34657pt too wide) in paragraph at lines 231--334
 [][] 
  []
 
-[6 <./bilder//uni_jena_logo.jpg>] [7] [8] (Protokoll.lof)
+Package hyperref Info: bookmark level for unknown infobox defaults to 0 on input line 347.
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.369 \newpage
+               <./bilder//uni_jena_logo.jpg>] [7pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.369 \newpage
+              ] [8] (Protokoll.lof)
 \tf@lof=\write8
 \openout8 = `Protokoll.lof'.
+
+ (Protokoll.lot)
+\tf@lot=\write9
+\openout9 = `Protokoll.lot'.
 
  [9]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     365.
+(LaTeX3)     395.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     365.
+(LaTeX3)     395.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     365.
+(LaTeX3)     395.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     365.
+(LaTeX3)     395.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     395.
 
  (Protokoll.aux)
 Package rerunfilecheck Info: File `Protokoll.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24236 strings out of 480237
- 506790 string characters out of 2878207
- 968692 words of memory out of 3000000
- 40274 multiletter control sequences out of 15000+200000
+ 24324 strings out of 480237
+ 508209 string characters out of 2878207
+ 970231 words of memory out of 3000000
+ 40353 multiletter control sequences out of 15000+200000
  613927 words of font info for 110 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,20n,111p,10606b,923s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/roboto/rbto_b5rac7.enc}{C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/roboto/rbto_ocbbsb.enc}{C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/roboto/rbto_shbyjm.enc}<C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/google/roboto/Roboto-Bold.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/google/roboto/Roboto-Italic.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/google/roboto/Roboto-Regular.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Maximilian/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Protokoll.pdf (9 pages, 445376 bytes).
+Output written on Protokoll.pdf (9 pages, 448955 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
+ 154 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
  79 words of extra memory for PDF output out of 10000 (max. 10000000)
 

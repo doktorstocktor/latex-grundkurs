@@ -65,6 +65,12 @@
 \usepackage{rotating}
 \newcommand{\rotatehead}[1]{\rotatebox{45}{\parbox{1.2cm}{\raggedright\bfseries #1}}}
 
+%Gleitobjektumgebung für Infoboxen
+\usepackage{float}
+\floatstyle{ruled}
+\newfloat{infobox}{h}{loi}
+\floatname{infobox}{Infobox}
+
 
 
 
@@ -208,16 +214,17 @@ Ich finde so alte Logos wie das der Friedrich-Schiller-Universität Jena (\autor
 \begin{figure}[!b]
     \centering
     \includegraphics[width=10cm]{uni_jena_logo.jpg}
-    \caption{Die Friedrich-Schiller-Universität Jena beherbergte im Wintersemester 2024/25 ganze 16.552 Studierende sowie 10.022 Mitarbeiter.}
+    \caption[Logo der FSU Jena]{Die Friedrich-Schiller-Universität Jena beherbergte im Wintersemester 2024/25 ganze 16.552 Studierende sowie 10.022 Mitarbeiter.}
     \label{fig:fsu_logo}
 \end{figure}
 
 
 
-%Hieran bin ich ein bisschen verzweifelt und habe schließlich für ein paar Dinge ein LLM zu Rate gezogen.
+%Hieran bin ich ein bisschen verzweifelt und habe schließlich für ein paar Dinge ein LLM zu Rate gezogen. Sollte jetzt zwar halbwegs passen, aber war schon ein Krampf...
 \begin{sidewaystable}
-    \caption{So könnte eine Tabelle zur Auflistung der \\
+    \caption[DFG-finanzierte FMI-Projekte]{So könnte eine Tabelle zur Auflistung der \\
     DFG-finanzierten Forschungsprojekte an der FMI aussehen.}
+    \label{tab:dfg_fmi}
 
 \rowcolors{1}{white}{white}
 
@@ -336,10 +343,25 @@ $^d$Nationale Forschungsdateninfrastruktur
 
 
 
+\begin{infobox}[h]
+  \caption{\TeX-Engines, -Erweiterungen, und -Distributionen}
+  \label{inf:text_engines}
+  \begin{tcolorbox}[
+    colback=cyan!5!white,
+    colframe=cyan!80!black,
+    arc=2mm
+  ]
+    \textbf{pdfTeX} ist vollständig rückwärtskompatibel zu Knuths TeX und erzeugt PDF-Dokumente. \\ [10pt]
+    \textbf{MiKTeX} ist eine TeX-Distribution für Windows, MacOS und Linux von Christian Schenk. \\ [10pt]
+    \textbf{LuaTeX} ist Unicode-basiert (UTF-8), verwendet also Unicode als Eingabe. \\ [10pt]
+    \textbf{xelatex} ist ein XeTeX Compiler mit LaTeX Initialisierungsdateien. \\ [10pt]
+    \textbf{Overleaf} ist ein LaTeX-Editor mit einer großen Auswahl an Vorlagen.
+  \end{tcolorbox}
+\end{infobox}
 
 
-
-
+In diesem Abschnitt haben wir einige \textbf{Gleitobjekte} eingefügt. Neben dem \textit{ziemlich coolen} Logo der Friedrich-Schiller-Universität Jena (\autoref{fig:fsu_logo}, Seite \pageref{fig:fsu_logo}) wurde unter Schweiß und Tränen (okay, so schlimm war es dann zum Glück doch nicht) eine Übersicht zu DFG-finanzierten Forschungsprojekten an der FMI entwickelt (\autoref{tab:dfg_fmi}, Seite \pageref{tab:dfg_fmi}) und eine schicke Infobox (Infobox \ref{inf:text_engines}, Seite \pageref{inf:text_engines}) gesetzt, die sich sehr kurz mit verschiedenen \TeX-Engines, -Erweiterungen, und -Distributionen auseinandersetzt. \\
+Unklar ist, ob hier auch das Logo des Wurzel e.V. erwähnt werden sollte, da es zwar in diesem Abschnitt der Aufgaben eingefügt wurde, jedoch ohne \glqq caption\grqq\ und in einen Textabschnitt aus einer früheren \glqq section\grqq .
 
 
 
@@ -347,6 +369,13 @@ $^d$Nationale Forschungsdateninfrastruktur
 \newpage
 
 \section{Mathematik und Informatik}
+
+%TODO: hier werden die restlichen aufgaben eingefügt.
+
+
+
+
+
 
 
 \section{Großprojekte}
@@ -360,6 +389,7 @@ $^d$Nationale Forschungsdateninfrastruktur
 
 \newpage
 \listoffigures
+\listoftables
 
 \label{LastPage} %Für Angabe der Gesamtseitenzahl in Fußzeile
 \end{document}
@@ -368,3 +398,4 @@ $^d$Nationale Forschungsdateninfrastruktur
 %TODOs:
 %checken, ob die Sections tatsächlich oben recht in der Kopfzeile angezeigt werden.
 %eventuell \newpage nach jedem Abschnitt einfügen
+%Kommentare durchgehen und ggf anpassen --> LLM Erwähnung kritisch?
