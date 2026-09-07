@@ -1,0 +1,77 @@
+\chapter{Berechnung}
+
+\section{Erwartungswert}
+
+Bei einer Begegnung zweier Spieler gibt es für einen Sieg einen, für ein Unentschieden einen halben und für eine Niederlage keinen Punkt. Die \textit{erwartete Punktezahl E} (von englisch \textit{expected score}, Erwartungswert) ist somit die Wahrscheinlichkeit, dass der Spieler gewinnt, multipliziert mit einem Punkt, plus die Wahrscheinlichkeit für ein Remis multipliziert mit einem halben Punkt. Der Erwartungswert liegt damit zwischen $0$ und $1$. %TODO: Verweis auf Anmerkung 2 :)
+
+Das Elo-System ist mathematisch so modelliert, dass sich bei der Begegnung zweier Spieler $A$ und $B$ der Erwartungswert $E_{A}$ für den Spieler $A$ aus den beiden Ratings $R_{A}$ und $R_{B}$ wie folgt berechnet:
+
+%PLATZHALTER: Formel für E_A
+
+Entsprechend gilt für $E_{B}$, den erwarteten Punktestand von Spieler $B$:
+
+%PLATZHALTER: Formel für E_B (einfach kopieren von oben).
+
+Da genau ein Punkt auf beide Spieler verteilt wird, muss gelten:
+
+%PLATZHALTER: Formel EA und EB einfügen.
+
+%PLATZHALTEN: Tabelle mit Werten für E_A und E_B eventuell (daneben??) einfügen
+
+Aus den Formeln für den Erwartungswert ergibt sich, dass diese Bedingung stets erfüllt ist.
+
+Die in der Formel enthaltene, willkürlich festgelegte Zahl $400$ legt die Abstufung der Elo-Skala fest: Bei einer Elo-Differenz von $400$ wird der Spieler höchstwahrscheinlich gewinnen ($E_{A} = 91 \%$). Die Zahl $400$ wurde von Arpad Elo so gewählt, damit die Elo-Zahlen mit den Wertungszahlen des früher verwendeten Schach-Rating-Systems von Kenneth Harkness möglichst gut kompatibel sind. Im Schweizer Tischtennis wird z.\,B. $200$ statt $400$ verwendet, im deutschen $150$, s.\,u. %TODO: mögliche Anmkerung 3
+
+Beträgt der Wertungsunterschied $|R_{B} - R_{A}|$ mehr als $400$ Punkte, so erlaubt die FIDE anstelle der tatsächlichen Differenz den Wert $400$ bzw. $-400$ zu benutzen. Ab 2022 kann ein Spieler aber nur noch einmal pro Turnier von einer solchen Aufwertung profitieren, für die anderen eventuellen Gegner mit einem Wertungsunterschied $> 400$ wird dann mit dem tatsächlichen Wertungsunterschied gerechnet.
+
+%Hier ist auf Wikipedia angemerkt, dass kommende Abschnitte überarbeitet werden müssen.
+
+Die Gewinnerwartung eines Spielers als Funktion der Punktedifferenz folgt in Elos Modell einer logistischen Funktion. Das heißt jedoch \textit{nicht}, dass die Stärken der Spieler logistisch verteilt sind. Elo verzichtet auf eine solche Verteilungsannahme. Sein Modell fußt auf der charakteristischen Eigenschaft der \textit{Multiplikativität der Erwartungswerte}.
+
+
+\section{Multiplikativität der Erwartungswerte}
+
+Die Erwartungswerte sind multiplikativ -- mithilfe dieser Eigenschaft lässt sich Elos Modell definieren. Wenn etwa Spieler $A$ gegenüber Spieler $B$ ein $3$:$1$-Favorit ist (d.\,h., $A$ erzielt in Partien gegen $B$ $75$ Prozent der Punkte) und $B$ gegenüber $C$ ein $2$:$1$-Favorit, so fordert bzw. folgt aus Elos Modell, dass $A$ gegenüber $C$ ein $6$:$1$-Favorit ist.
+
+Oder allgemein ausgedrückt:
+
+%PLATZHALTER: Alignment mit den drei Aussagen einbauen (oder so)
+
+Dies kann man leicht nachrechnen. Die \textit{Multiplikativität} ist aber \textit{keine} Konsequenz aus einer Normalverteilung, was man oft liest. Diese bezieht sich nur auf die Abweichung der tatsächlichen Spielergebnisse eines Spielers vom Erwartungswert (s.\,u.) und nicht auf eine Normalverteilung der Stärken der Spieler. Die Forderung nach Multiplikativität stellt den besseren Ausgangspunkt für die Entwicklung des Modells dar -- insbesondere für die Kalkulation der Spielstärken von Spielern früherer Epochen.
+
+
+\section{Anpassung der Elo-Zahl}
+
+Die Elo-Zahlen der Spieler werden regelmäßig aktualisiert. Erzielt ein Spieler in seinen Partien mehr Punkte, als von seiner aktuellen Elo-Zahl zu erwarten war, gewinnt er Elo-Punkte hinzu; erzielt er weniger, verliert er Elo-Punkte. Maßgeblich ist hierfür der so genannte $k$-Faktor oder $k$-Koeffizient. Er gibt an, wie viele Elo-Punkte ein Spieler bei einer Partie maximal hinzugewinnen kann (bei einem Sieg über einen viel stärker bewerteten Gegner) oder maximal verlieren kann (Niederlage gegen einen viel schwächer bewerteten Gegner). Wenn ein Spieler $S$ Partiepunkte erzielt, der Erwartungswert aufgrund bestehender Elo-Zahlen aber $E$ betrug, ändert sich seine Elo-Zahl um $k \cdot (S - E)$. Die neue Elo-Zahl $R'$ ist also
+
+%PLATZHALTER: Formel für R' einfügen
+
+Der Faktor $k$ ist durch das Elo-Modell nicht festgelegt. Wenn er sehr groß gewählt wird, wirken sich zufällige Einzelergebnisse stark aus: die Elo-Zahl $R$ kann stark schwanken. Wenn er sehr klein gewählt wird, ist die Anpassung \glqq träge\grqq : $R$ wird erst nach vielen Partien an eine reale Änderung der Spielstärke angepasst. Für Spitzenspieler mit eher konstanter Leistung ist ein kleinerer Faktor angebracht als für Anfänger, die schnell Fortschritte machen können. Der Koeffizient $k$ wird daher dem \glqq Entwicklungsstand\grqq\ eines Spielers angepasst.%TODO: Anmkerung 1 verweisen
+
+Im Schach hat $k$ im Regelfall den Wert $40$, $20$ oder $10$:
+\begin{itemize}
+    \item $k = 40$: für Spieler, die neu in der Ratingliste sind und weniger als dreißig gewertete Partien aufweisen;
+    \item $k = 40$: für alle Spieler bis zum Ende des Kalenderjahres ihres 18. Geburtstags, solange ihre Bewertung $< 2300$ bleibt;
+    \item $k = 20$: für alle Spieler mit mindestens dreißig gewerteten Partien und einer maximalen Elo-Zahl $< 2400$. Dieser $k$-Wert trifft für die meisten erwachsenen Spieler zu;
+    \item $k = 10$: für alle Top-Spieler, die eine Elo-Zahl $\geq 2400$ erreicht haben, selbst wenn die Elo-Zahl wieder unter diesen Wert fällt.
+\end{itemize}
+
+Ausnahmsweise kann $k$ für einen Spieler in einer einzelnen Wertungsperiode einen abweichenden Wert annehmen, da das Produkt aus $k$ und der Anzahl der für einen Spieler in einer Wertungsperiode ausgewerteten Partien ($n$) kleiner als $700$ sein muss. In diesem Fall wird $k$ auf die größte natürliche Zahl abgesenkt, für die $k \cdot n < 700$ gilt.
+
+
+
+
+
+\subsection{Anpassung nach einer Partie}
+
+\subsection{Maximaler Punktgewinn durch eine Partie}
+
+\subsection{Spiele gegen einen gleichstarken Spieler}
+
+
+
+
+\section{Elo-Performance}
+
+
+
