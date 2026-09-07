@@ -1,0 +1,61 @@
+\documentclass[
+    12pt,
+    a4paper,
+    oneside,
+    bibliography=totoc, %TODO: vllt raus (nächste Zeile vielleicht auch).
+    listof=totoc
+]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{hyperref}
+\hypersetup{ %TODO: vllt rausnehmen...
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\title{Elo-Zahl}
+\subtitle{Ein Wikipediaartikel als Kreativprojekt}
+\author{Maximilian Stock}
+\date{\today}
+
+
+
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\tableofcontents
+\listoffigures %TODO: eher ans Ende
+\listoftables %TODO: eher ans Ende
+
+
+\mainmatter
+
+
+\input{kapitel/00_einleitung.tex}
+\input{kapitel/01_berechnung.tex}
+\input{kapitel/02_probleme.tex}
+\input{kapitel/03_schach.tex}
+\input{kapitel/04_anwendungen.tex}
+\input{kapitel/05_sonstiges.tex}
+
+
+\backmatter
+
+\printbibliography[title={Literaturverzeichnis}]
+
+\end{document}
