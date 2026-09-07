@@ -2,7 +2,7 @@
 
 \section{Erwartungswert}
 
-Bei einer Begegnung zweier Spieler gibt es für einen Sieg einen, für ein Unentschieden einen halben und für eine Niederlage keinen Punkt. Die \textit{erwartete Punktezahl E} (von englisch \textit{expected score}, Erwartungswert) ist somit die Wahrscheinlichkeit, dass der Spieler gewinnt, multipliziert mit einem Punkt, plus die Wahrscheinlichkeit für ein Remis multipliziert mit einem halben Punkt. Der Erwartungswert liegt damit zwischen $0$ und $1$. %TODO: Verweis auf Anmerkung 2 :)
+Bei einer Begegnung zweier Spieler gibt es für einen Sieg einen, für ein Unentschieden einen halben und für eine Niederlage keinen Punkt. Die \textit{erwartete Punktezahl E} (von englisch \textit{expected score}, Erwartungswert) ist somit die Wahrscheinlichkeit, dass der Spieler gewinnt, multipliziert mit einem Punkt, plus die Wahrscheinlichkeit für ein Remis multipliziert mit einem halben Punkt. Der Erwartungswert liegt damit zwischen $0$ und $1$ (s. Anm. \ref{anm_2}).
 
 Das Elo-System ist mathematisch so modelliert, dass sich bei der Begegnung zweier Spieler $A$ und $B$ der Erwartungswert $E_{A}$ für den Spieler $A$ aus den beiden Ratings $R_{A}$ und $R_{B}$ wie folgt berechnet:
 \[
@@ -39,7 +39,7 @@ Da genau ein Punkt auf beide Spieler verteilt wird, muss gelten:
 
 Aus den Formeln für den Erwartungswert ergibt sich, dass diese Bedingung stets erfüllt ist (\autoref{tab:erwartungswerte}).
 
-Die in der Formel enthaltene, willkürlich festgelegte Zahl $400$ legt die Abstufung der Elo-Skala fest: Bei einer Elo-Differenz von $400$ wird der Spieler höchstwahrscheinlich gewinnen ($E_{A} = 91 \%$). Die Zahl $400$ wurde von Arpad Elo so gewählt, damit die Elo-Zahlen mit den Wertungszahlen des früher verwendeten Schach-Rating-Systems von Kenneth Harkness möglichst gut kompatibel sind. Im Schweizer Tischtennis wird z.\,B. $200$ statt $400$ verwendet, im deutschen $150$, s.\,u. %TODO: mögliche Anmkerung 3
+Die in der Formel enthaltene, willkürlich festgelegte Zahl $400$ legt die Abstufung der Elo-Skala fest: Bei einer Elo-Differenz von $400$ wird der Spieler höchstwahrscheinlich gewinnen ($E_{A} = 91 \%$). Die Zahl $400$ wurde von Arpad Elo so gewählt, damit die Elo-Zahlen mit den Wertungszahlen des früher verwendeten Schach-Rating-Systems von Kenneth Harkness möglichst gut kompatibel sind (s Anm. \ref{anm_3}). Im Schweizer Tischtennis wird z.\,B. $200$ statt $400$ verwendet, im deutschen $150$, s.\,u.
 
 Beträgt der Wertungsunterschied $|R_{B} - R_{A}|$ mehr als $400$ Punkte, so erlaubt die FIDE anstelle der tatsächlichen Differenz den Wert $400$ bzw. $-400$ zu benutzen. Ab 2022 kann ein Spieler aber nur noch einmal pro Turnier von einer solchen Aufwertung profitieren, für die anderen eventuellen Gegner mit einem Wertungsunterschied $> 400$ wird dann mit dem tatsächlichen Wertungsunterschied gerechnet.
 
@@ -69,7 +69,7 @@ Die Elo-Zahlen der Spieler werden regelmäßig aktualisiert. Erzielt ein Spieler
 \[
     R' = R + k \cdot (S - E)
 \]
-Der Faktor $k$ ist durch das Elo-Modell nicht festgelegt. Wenn er sehr groß gewählt wird, wirken sich zufällige Einzelergebnisse stark aus: die Elo-Zahl $R$ kann stark schwanken. Wenn er sehr klein gewählt wird, ist die Anpassung \glqq träge\grqq : $R$ wird erst nach vielen Partien an eine reale Änderung der Spielstärke angepasst. Für Spitzenspieler mit eher konstanter Leistung ist ein kleinerer Faktor angebracht als für Anfänger, die schnell Fortschritte machen können. Der Koeffizient $k$ wird daher dem \glqq Entwicklungsstand\grqq\ eines Spielers angepasst.%TODO: Anmkerung 1 verweisen
+Der Faktor $k$ ist durch das Elo-Modell nicht festgelegt. Wenn er sehr groß gewählt wird, wirken sich zufällige Einzelergebnisse stark aus: die Elo-Zahl $R$ kann stark schwanken. Wenn er sehr klein gewählt wird, ist die Anpassung \glqq träge\grqq : $R$ wird erst nach vielen Partien an eine reale Änderung der Spielstärke angepasst. Für Spitzenspieler mit eher konstanter Leistung ist ein kleinerer Faktor angebracht als für Anfänger, die schnell Fortschritte machen können. Der Koeffizient $k$ wird daher dem \glqq Entwicklungsstand\grqq\ eines Spielers angepasst (s. Anm. \ref{anm_1}).
 
 Im Schach hat $k$ im Regelfall den Wert $40$, $20$ oder $10$:
 \begin{itemize}
@@ -120,7 +120,7 @@ Der maximal mögliche Elo-Punktgewinn/-verlust ist durch den $k$-Faktor festgele
 \[
     k \cdot (1 - E_{A}) \geq k - 0,5 \hspace{0,5cm} \Rightarrow \hspace{0,5cm} E_{A} \leq \frac{1}{2k}.
 \]
-Mit der Formel %Anmerkung 4 verweisen :)
+Mit der Formel (s. Anm. \ref{anm_4})
 \[
     R_{B} - R_{A} = 400 \cdot \log_{10} (\frac{1}{E_{A}} - 1)
 \]

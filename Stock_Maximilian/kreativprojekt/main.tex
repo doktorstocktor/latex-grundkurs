@@ -2,7 +2,7 @@
     12pt,
     a4paper,
     oneside,
-    bibliography=totoc, %TODO: vllt raus (nächste Zeile vielleicht auch).
+    bibliography=totoc,
     listof=totoc
 ]{scrbook}
 
@@ -13,16 +13,21 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 
-\usepackage[backend=biber, style=numeric]{biblatex}
+% Kopf- und Fußzeile
+\usepackage[headsepline,footsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+\automark{chapter}
+\ihead{Maximilian Stock -- 166816}
+\ohead{\headmark}
+\cfoot{\pagemark}
+\pagestyle{scrheadings}
+\renewcommand*{\chapterpagestyle}{scrheadings}
+
+
+\usepackage[backend=bibtex, style=numeric]{biblatex}
 \addbibresource{references.bib}
 
-\usepackage{hyperref}
-\hypersetup{ %TODO: vllt rausnehmen...
-    colorlinks=true,
-    linkcolor=black,
-    citecolor=blue,
-    urlcolor=blue
-}
+\usepackage[hidelinks]{hyperref}
 
 \usepackage{parskip}
 
@@ -37,6 +42,13 @@
 \usepackage{array}
 
 
+
+
+\titlehead{{\Large Friedrich-Schiller-Universität Jena} \\
+    Fakultät für Mathematik und Informatik \\
+    \centering
+    \includegraphics[width=0.5\textwidth]{fsu_logo.jpg}}
+\subject{\LaTeX\ Grundlagen}
 \title{Elo-Zahl}
 \subtitle{Ein Wikipediaartikel als Kreativprojekt}
 \author{Maximilian Stock}
@@ -69,6 +81,7 @@
 
 \backmatter
 
+\nocite{*}
 \printbibliography[title={Literaturverzeichnis}]
 
 \end{document}
