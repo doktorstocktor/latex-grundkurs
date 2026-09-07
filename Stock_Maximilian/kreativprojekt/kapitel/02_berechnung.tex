@@ -5,18 +5,19 @@
 Bei einer Begegnung zweier Spieler gibt es für einen Sieg einen, für ein Unentschieden einen halben und für eine Niederlage keinen Punkt. Die \textit{erwartete Punktezahl E} (von englisch \textit{expected score}, Erwartungswert) ist somit die Wahrscheinlichkeit, dass der Spieler gewinnt, multipliziert mit einem Punkt, plus die Wahrscheinlichkeit für ein Remis multipliziert mit einem halben Punkt. Der Erwartungswert liegt damit zwischen $0$ und $1$. %TODO: Verweis auf Anmerkung 2 :)
 
 Das Elo-System ist mathematisch so modelliert, dass sich bei der Begegnung zweier Spieler $A$ und $B$ der Erwartungswert $E_{A}$ für den Spieler $A$ aus den beiden Ratings $R_{A}$ und $R_{B}$ wie folgt berechnet:
-
-%PLATZHALTER: Formel für E_A
-
+\[
+    E_{A} = \frac{10^{R_{A}/400}}{10^{R_{A}/400} + 10^{R_{B}/400}} = \frac{1}{1 + 10^{(R_{B} - R_{A})/400}}
+\]
 Entsprechend gilt für $E_{B}$, den erwarteten Punktestand von Spieler $B$:
-
-%PLATZHALTER: Formel für E_B (einfach kopieren von oben).
-
+\[
+    E_{B} = \frac{10^{R_{B}/400}}{10^{R_{A}/400} + 10^{R_{B}/400}} = \frac{1}{1 + 10^{(R_{A} - R_{B})/400}}
+\]
 Da genau ein Punkt auf beide Spieler verteilt wird, muss gelten:
+\[
+    E_{A} + E_{B} = 1
+\]
 
-%PLATZHALTER: Formel EA und EB einfügen.
-
-%PLATZHALTEN: Tabelle mit Werten für E_A und E_B eventuell (daneben??) einfügen
+%PLATZHALTER: Tabelle mit Werten für E_A und E_B eventuell (daneben??) einfügen
 
 Aus den Formeln für den Erwartungswert ergibt sich, dass diese Bedingung stets erfüllt ist.
 
@@ -35,7 +36,11 @@ Die Erwartungswerte sind multiplikativ -- mithilfe dieser Eigenschaft lässt sic
 
 Oder allgemein ausgedrückt:
 
-%PLATZHALTER: Alignment mit den drei Aussagen einbauen (oder so)
+\begin{itemize}
+    \item[] Ist $A$ ein $x : 1$-Favorit gegenüber $B$ und
+    \item[] ist $B$ ein $y : 1$-Favorit gegenüber $C$, so
+    \item[] ist gemäß Elos Modell $A$ ein $xy : 1$-Favorit gegenüber $C$.
+\end{itemize}
 
 Dies kann man leicht nachrechnen. Die \textit{Multiplikativität} ist aber \textit{keine} Konsequenz aus einer Normalverteilung, was man oft liest. Diese bezieht sich nur auf die Abweichung der tatsächlichen Spielergebnisse eines Spielers vom Erwartungswert (s.\,u.) und nicht auf eine Normalverteilung der Stärken der Spieler. Die Forderung nach Multiplikativität stellt den besseren Ausgangspunkt für die Entwicklung des Modells dar -- insbesondere für die Kalkulation der Spielstärken von Spielern früherer Epochen.
 
@@ -43,9 +48,9 @@ Dies kann man leicht nachrechnen. Die \textit{Multiplikativität} ist aber \text
 \section{Anpassung der Elo-Zahl}
 
 Die Elo-Zahlen der Spieler werden regelmäßig aktualisiert. Erzielt ein Spieler in seinen Partien mehr Punkte, als von seiner aktuellen Elo-Zahl zu erwarten war, gewinnt er Elo-Punkte hinzu; erzielt er weniger, verliert er Elo-Punkte. Maßgeblich ist hierfür der so genannte $k$-Faktor oder $k$-Koeffizient. Er gibt an, wie viele Elo-Punkte ein Spieler bei einer Partie maximal hinzugewinnen kann (bei einem Sieg über einen viel stärker bewerteten Gegner) oder maximal verlieren kann (Niederlage gegen einen viel schwächer bewerteten Gegner). Wenn ein Spieler $S$ Partiepunkte erzielt, der Erwartungswert aufgrund bestehender Elo-Zahlen aber $E$ betrug, ändert sich seine Elo-Zahl um $k \cdot (S - E)$. Die neue Elo-Zahl $R'$ ist also
-
-%PLATZHALTER: Formel für R' einfügen
-
+\[
+    R' = R + k \cdot (S - E)
+\]
 Der Faktor $k$ ist durch das Elo-Modell nicht festgelegt. Wenn er sehr groß gewählt wird, wirken sich zufällige Einzelergebnisse stark aus: die Elo-Zahl $R$ kann stark schwanken. Wenn er sehr klein gewählt wird, ist die Anpassung \glqq träge\grqq : $R$ wird erst nach vielen Partien an eine reale Änderung der Spielstärke angepasst. Für Spitzenspieler mit eher konstanter Leistung ist ein kleinerer Faktor angebracht als für Anfänger, die schnell Fortschritte machen können. Der Koeffizient $k$ wird daher dem \glqq Entwicklungsstand\grqq\ eines Spielers angepasst.%TODO: Anmkerung 1 verweisen
 
 Im Schach hat $k$ im Regelfall den Wert $40$, $20$ oder $10$:
@@ -64,28 +69,28 @@ Im Schweizer Tischtennis gilt $k = 15$ einheitlich für alle Spieler.
 \subsection{Anpassung nach einer Partie}
 
 Beispiel: Alfred ($R_{A} = 2306$) spielt gegen Berta ($R_{B} = 2077$). Das entspricht einem Wertungsunterschied $R_{A} - R_{B} = 229$. Zu erwarten ist, dass Alfred gegen Berta im Mittel $0,789$ Punkte pro Spiel erzielt:
-
-%PLATZHALTER: Formel Berechnung E_A.
-
+\[
+    E_{A} = \frac{1}{1 + 10^{(2077-2306) / 400}} = 0,789
+\]
 Nach einer Partie gibt es drei Möglichkeiten (angenommen sei dabei $k = 20$ für beide Spieler):
 
 \paragraph{a) Berta gewinnt}-- \ also $S_{A} = 0$.
 Die neuen Elo-Punktestände $R'_{A}$ für Alfred und $R'_{B}$ für Berta sind
-
-%PLATZHALTER: Formel R'_A und R'_B
-
+\[
+    R'_{A} = 2306 + 20 \cdot (0 - 0,789) \approx 2290, \hspace{1cm} R'_{B} = 2077 + 20 \cdot (1 - 0,211) \approx 2093.
+\]
 Alfred büßt $16$ Elo-Punkte ein, während Berta $16$ Elo-Punkte hinzugewinnt.
 
 \paragraph{b) Alfred gewinnt}-- \ also $S_{A} = 1$.
-
-%PLATZHALTER: Formel R'_A und R'_B
-
+\[
+    R'_{A} = 2306 + 20 \cdot (1 - 0,789) \approx 2310, \hspace{1cm} R'_{B} = 2077 + 20 \cdot (0 - 0,211) \approx 2073.
+\]
 Alfred erhält $4$ Elo-Punkte, Berta verliert $4$.
 
 \paragraph{c) Unentschieden}-- \ also $S_{A} = \frac{1}{2}$.
-
-%PLATZHALTER: Formel R'_A und R'_B
-
+\[
+    R'_{A} = 2306 + 20 \cdot (0,5 - 0,789) \approx 2300, \hspace{1cm} R'_{B} = 2077 + 20 \cdot (0,5 - 0,211) \approx 2083.
+\]
 Alfred verliert $6$ Elo-Punkte, Berta gewinnt $6$.
 
 
@@ -94,17 +99,17 @@ Alfred verliert $6$ Elo-Punkte, Berta gewinnt $6$.
 Ab welchem Wertungsunterschied (Elo-Differenz zwischen den Spielern) ist bei einem Sieg der maximale Elo-Punktgewinn möglich?
 
 Der maximal mögliche Elo-Punktgewinn/-verlust ist durch den $k$-Faktor festgelegt. Da Elo-Punkte auf ganze Zahlen gerundet werden, muss der rechnerische Punktgewinn $k \cdot (S_{A} - E_{A})$ mindestens $k - 0,5$ betragen. Demnach muss gelten (wegen $S_{A} = 1$):
-
-%PLATZHALTER: Formel
-
+\[
+    k \cdot (1 - E_{A}) \geq k - 0,5 \hspace{0,5cm} \Rightarrow \hspace{0,5cm} E_{A} \leq \frac{1}{2k}.
+\]
 Mit der Formel %Anmerkung 4 verweisen :)
-
-%PLATZHALTER Formel
-
+\[
+    R_{B} - R_{A} = 400 \cdot \log_{10} (\frac{1}{E_{A}} - 1)
+\]
 erhält man
-
-%PLATZHALTER Formel R_B - R_A
-
+\[
+    R_{B} - R_{A} \geq 512; 637; 760
+\]
 für die $k$-Werte $10$, $20$ bzw. $40$. Ein Topspieler ($k = 10$) kann mit einer Partie maximal $10$ Elo-Punkte gewinnen und muss dafür einen Spieler mit einer um $512$ höheren Elo-Zahl besiegen.
 
 
@@ -118,9 +123,9 @@ Sind beide Spieler gleich stark, also $R_{B} - R_{A} = 0$, ist $E_{A} = 0,5$. Be
 Als \textit{Elo-Performance} (auch \textit{Turnierleistung} genannt) bezeichnet man die in Elo-Punkten ausgedrückte Leistung eines Spielers in einem einzelnen Turnier. Im Gegensatz zur normalen Elo-Berechnung geht die vorherige Elo-Zahl nicht in diese Wertung ein.
 
 Die Elo-Performance $P$ ist rechnerisch die Elo-Zahl, die ein Spieler haben müsste, damit das erzielte Ergebnis $S$ gerade gleich dem Erwartungswert $E$ ist. Eine Näherungsformel ist
-
-%PLATZHALTER Formel für P. --> komma am Ende :)
-
+\[
+    P = R_{G} + 800 \cdot (\frac{S}{N} - 0,5),
+\]
 wobei $R_{G}$ das mittlere Rating der Gegner ist und $N$ die Zahl der gespielten Partien. Diese Näherung ist besonders gut, wenn $S/N$ nahe bei $0,5$ ist.
 
 Die Elo-Performance wird neben ihrem rein sportlichen Aussagewert als Kriterium zur Vergabe von Sonderpreisen gewählt, wenn ein anderer direkter Leistungsvergleich der Spieler nicht möglich ist -- z.\,B., um den besten Einzelspieler in einem Mannschaftsturnier zu bestimmen.

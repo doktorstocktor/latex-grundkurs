@@ -19,23 +19,29 @@ Eine länger bestehende inoffizielle Adaption des Elo-Systems für Männernation
 \subsection{In der Schweiz}
 
 Swiss Table Tennis nutzt seit der Saison 2010/2011 eine etwas modifizierte Elo-Formel zur Berechnung von Wertungspunkten
-
-%PLATZHALTER: Formel E_A
-
-%TODO:ggf darunter die Erklärungen aufschreiben
-
+\[
+    E_{A} = \frac{1}{1 + 10^{(R_{B} - R_{A}) / 200}}
+\]
+\begin{itemize}
+    \item[] $E_{A}$: Erwarteter Punktestand für Spieler $A$.
+    \item[] $R_{A}$: bisherige Punkte-Zahl von Spieler $A$.
+    \item[] $R_{B}$: bisherige Punkte-Zahl von Spieler $B$.
+\end{itemize}
 Der Erwartungswert von $A$ beträgt nun $E_{A} \cdot 100 \%$. Die neue Punkte-Zahl von Spieler $A$ ist
-
-%PLATZHALTER: Formel R'_A
-
-%TODO: falls oben gemacht auch hier S_A erklären.
+\[
+    R'_{A} = R_{A} + 15 \cdot (S_{A} - S_{E})
+\]
+\begin{itemize}
+    \item[] $S_{A}$: tatsächlich gespielter Punktestand ($1$ für jeden Sieg, $0$ für jede Niederlage, Remis ist im Tischtennis nicht möglich).
+\end{itemize}
 
 
 \subsection{In Deutschland: der TTR-Wert}
 
 In Deutschland wird nach einem analogen System für jeden Aktiven ein \textbf{TTR-Wert} errechnet. Hier wird die Wertungsdifferenz durch $150$ geteilt.
-
-%PLATZHALTER: Formel E_A
+\[
+    E_{A} = \frac{1}{1 + 10^{(R_{B} - R_{A}) / 150}}
+\]
 
 
 \section{Scrabble}
