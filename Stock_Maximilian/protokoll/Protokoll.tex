@@ -71,13 +71,53 @@
 \newfloat{infobox}{h}{loi}
 \floatname{infobox}{Infobox}
 
+%Eigener Theoremstil
+\usepackage[fleqn]{amsmath}
+\usepackage{amsthm}
+\setlength{\parskip}{2mm}
+\DeclareMathOperator{\Hyp}{Hyp}
+\newtheoremstyle{das_hat_stil}
+  {5pt}
+  {5pt}
+  {\fontfamily{lmr}\selectfont} %Ich hoffe, das ist mit "Achten Sie auf die richtigen Schriftarten" gemeint.
+  {}
+  {\fontfamily{lmr}\selectfont\bfseries}
+  {}
+  {\newline}
+  {\rule{\linewidth}{0.5pt}\\\thmname{#1} \thmnumber{#2}: \thmnote{ #3}\\[-6pt]\rule{\linewidth}{0.5pt}}
+\theoremstyle{das_hat_stil}
+\newtheorem{definition}{Definition}
 
+%Pseudocode
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 
+%Quelltext - leider nicht perfekt
+%minted wollte ich nicht verwenden, weil ich keine unnötigen Abhängigkeiten haben wollte.
+\usepackage{listings}
+\lstdefinestyle{python}{
+  language=Python,
+  backgroundcolor=\color{lightgray},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=leftline,
+  rulecolor=\color{black},
+  framesep=5pt,
+  framexleftmargin=2pt,
+  basicstyle=\small\fontfamily{lmr}\selectfont,
+  keywordstyle=\color{green!42!black},
+  morekeywords=[2]{sugar,alimerge},
+  keywordstyle=[2]\color{blue},
+  deletekeywords={in},
+  morekeywords=[3]{in, is},
+  keywordstyle=[3]\color{Purple},
+  commentstyle=\color{Teal}\itshape,
+  stringstyle=\color{red}\itshape,
+  morestring=[s]{"""}{"""},
+  breaklines=true
+}
+\lstset{style=python}
 
-
-
-%soll als letztes Paket eingebunden werden (diesen Kommentar am Ende wieder löschen)
-%TODO: obigen Kommentar wieder löschen!
 \usepackage[top=3cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}
 
 
@@ -220,7 +260,7 @@ Ich finde so alte Logos wie das der Friedrich-Schiller-Universität Jena (\autor
 
 
 
-%Hieran bin ich ein bisschen verzweifelt und habe schließlich für ein paar Dinge ein LLM zu Rate gezogen. Sollte jetzt zwar halbwegs passen, aber war schon ein Krampf...
+%Hieran bin ich ein bisschen verzweifelt und bin trotz großem Zeitaufwand und externer Hilfe nicht ganz zufrieden.
 \begin{sidewaystable}
     \caption[DFG-finanzierte FMI-Projekte]{So könnte eine Tabelle zur Auflistung der \\
     DFG-finanzierten Forschungsprojekte an der FMI aussehen.}
@@ -370,16 +410,72 @@ Unklar ist, ob hier auch das Logo des Wurzel e.V. erwähnt werden sollte, da es 
 
 \section{Mathematik und Informatik}
 
-%TODO: hier werden die restlichen aufgaben eingefügt.
+\begin{definition}[Hypergeometrische Verteilung]
+  Die Hypergeometrische Verteilung ist abhängig von drei Parametern:
+  \begin{itemize}
+    \item der Anzahl $N$ der Elemente einer Grundgesamtheit.
+    \item der Anzahl $M \leq N$ der Elemente mit einer bestimmten Eigenschaft in dieser Grundmenge (die Anzahl möglicher Erfolge).
+    \item der Anzahl $n \leq N$ der Elemente in einer Stichprobe.
+  \end{itemize}
+  Die Verteilung gibt nun Auskunft darüber, wie wahrscheinlich es ist, dass sich $k$ Elemente mit der zu prüfenden Eigenschaft (Erfolge bzw. Treffer) in der Stichprobe befinden. Der Ergebnisraum $\Omega$ ist daher $\{\max\{0, n + M - N\}, \dots , \min\{n, M\} \}$.
+
+  Eine diskrete Zufallsgröße $X$ unterliegt der hypergeometrischen Verteilung mit den Parametern $M$, $N$ und $n$, wenn sie die Wahrscheinlichkeiten
+  \[
+    h(k | N; M; n) := P(X = k) = \frac{\binom{M}{k} \binom{N-M}{n-k}}{\binom{N}{n}}
+  \]
+  für $k \in \Omega$ besitzt. Man schreibt $X \sim \Hyp_{N;M;n}$ oder $X \sim \Hyp (N,M,n)$ %hier fehlt ein Punkt
+
+  Die Verteilungsfunktion $H(k | N; M; n)$ gibt dann die Wahrscheinlichkeit an, dass höchstens $k$ Elemente mit der zu prüfenden Eigenschaft in der Stichprobe sind. Diese kumulierte Wahrscheinlichkeit ist die Summe
+  \[
+  H(k | N; M; n) := P(X \leq k) = \sum_{y=0}^{k} h(y | N; M; n) = \sum_{y=0}^{k} \frac{\binom{M}{y} \binom{N-M}{n-y}}{\binom{N}{n}}.
+  \]
+\end{definition}
+
+
+%die unterschiedlichen Klammern hätte ich beinahe übersehen...
+\[
+  \left(
+  \begin{matrix}
+    a_{1,1} & a_{1,2} & \dots & a_{1,n} \\
+    a_{2,1} & a_{2,2} & \dots & a_{2,n} \\
+    \vdots & \vdots & \ddots & \vdots \\
+    a_{m,1} & a_{m,2} & \dots & a_{m,n} \\
+  \end{matrix}
+  \right\}
+\]
+
+
+
+%Hierfür ändere ich jetzt nicht die Schriftart, ich hoffe das ist okay.
+\begin{algorithm}[H]
+\caption{Strict Consensus Merger}
+\begin{algorithmic}[1]
+  \Function{scm}{tree $T_1$, tree $T_2$}
+    \State $X \gets \mathcal{L}(T_1) \cap \mathcal{L}(T_2)$
+    \If{$|X| \geq 3$} \Comment{\textit{Otherwise, the merged tree will be unresolved.}}
+      \State calculate $T_{1|X}$ and $T_{2|X}$
+      \State $T_X \gets \textsc{StrictConsensus}(T_{1|X}, T_{2|X})$
+      \ForAll{removed subtrees of $T_1$ and $T_2$}
+        \If{collision} \Comment{\textit{Subtrees of $T_1$ and $T_2$ attach to the same edge $e$ in $T_X$}}
+          \State Insert all colliding subtrees to the same point on $e$. \Comment{\textit{creates polytomy}}
+        \Else
+          \State Reinsert subtree into $T_X$ without violating bipartitions in $T_1$ or $T_2$.
+        \EndIf
+      \EndFor
+      \State \Return $T_X$
+    \EndIf
+  \EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+
+%In der Aufgabenstellung ist nur der Code bis Zeile 62 abgebildet. Da dieser alleine wenig Sinn ergibt, bin ich davon ausgegangen, dass wir schon den gesamten Quelltext einfügen sollen...
+\lstinputlisting{anchorna-alimerge.py}
 
 
 
 
-
-
-
-\section{Großprojekte}
-
+\section{Großprojekte} %War mir nicht sicher, ob man die section einfügen sollte. Gleiches gilt für die nächste.
 
 \section{Spezielle \LaTeX \ Dokumente}
 
@@ -393,9 +489,3 @@ Unklar ist, ob hier auch das Logo des Wurzel e.V. erwähnt werden sollte, da es 
 
 \label{LastPage} %Für Angabe der Gesamtseitenzahl in Fußzeile
 \end{document}
-
-
-%TODOs:
-%checken, ob die Sections tatsächlich oben recht in der Kopfzeile angezeigt werden.
-%eventuell \newpage nach jedem Abschnitt einfügen
-%Kommentare durchgehen und ggf anpassen --> LLM Erwähnung kritisch?
